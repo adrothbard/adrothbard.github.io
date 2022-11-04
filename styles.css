@@ -1,53 +1,114 @@
+body, h1, h2, h3, p, img, ul, li{
+  border:0; margin:0; padding:0;
+}
+body {
+  background:#9ea4a5;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:0.8125rem;
+  color:#1c15ec
+ 
+
+}
+h1 {
+  font-size: 1.625rem;
+  
+}
+h3 {
+  margin-top: 0.438rem;
+  margin-bottom: 0.688rem;
+  
+}
+
+p{
+  letter-spacing:.04rem; 
+  line-height:1.313rem;
+  margin-top: 0.75rem;
+}
+
+picture {
+  float: right;
+  margin-right: 1rem;
+  
+}
+img {
+  border-radius: 30%;
+}
+button {
+ 
+
+}
+
 .wrapper {
     display: flex;  
     flex-flow: row wrap;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
   }
   
   .wrapper > * {
-    padding: 10px;
-    flex: 1 100%;
+    flex: 4 100%;
+    margin:0.2rem;
+
   }
   
   .header {
-    background:  rgb(134, 133, 130);
+    background-color: rgba(0,0,0,.5);
+    padding-left: 0.625rem;
+    border-radius: 7px;
   }
   
   
   .footer {
-    background:  rgb(134, 133, 130);
+    background-color: rgba(151, 200, 226, 0.5);
+    color: black;
+    padding-left: 0.625rem;
+    border-radius: 7px;
   }
   
   .main {
     text-align: left;
+   background-color: rgb(83, 107, 107, 0.5);
+   padding-left: 0.625rem;
+   border-radius: 7px;
    
-    background-repeat: no-repeat;
-    background-size: cover;
+   
   }
   
   .aside-1 {
-    background: rgb(134, 133, 130);
+    background:rgba(51, 51, 52, 0.5);
+    text-align: left;
+    color: black;
+    padding-left: 0.625rem;
+    border-radius: 7px;
   }
   
-  .aside-2 {
-    background:  rgb(134, 133, 130);
-  }
-  
-  @media all and (min-width: 600px) {
-    .aside { flex: 1 auto; }
-  }
-  
-  @media all and (min-width: 800px) {
-    .main    { flex: 4 0; }
-    .aside-1 { order: 1; } 
-    .main    { order: 2; }
-    .aside-2 { order: 3; }
-    .footer  { order: 4; }
-  }
-  
+
   button {
     height: 50px;
     width: 50px;
     margin: 10px;
+}
+
+@media all and (min-width:37.563rem) {
+  .aside { order: 1; flex: 1 0; }
+  .main    { order: 2; flex:3 0;}
+  .footer  { order: 3;}
+  body {
+
+  width: 56.438rem;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  }
+  
+@media screen and (max-width:37.5rem) { 
+  header, footer, main, aside {
+  width: 100%; 
+text-align: center;
+
+}
+
 }
