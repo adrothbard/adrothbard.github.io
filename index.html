@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">  
+
+     <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>CNIT 131M HWK 4</title>
-   <meta charset="utf-8">  
-   <!-- Responsive -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Simple PWA using RWD technique with flexbox layout">
- <link rel="stylesheet" href="styles.css">
+   <meta name="description" content="Simple PWA using RWD technique with flexbox layout">
+ 
+   <meta name="author" content="Andrew Rothbard">
+  <link rel="stylesheet" href="styles.css">
   
-  <!-- Meta Tags required for
-       Progressive Web App -->
+  <!-- Meta Tags required for Progressive Web App -->
   <meta name= "apple-mobile-web-app-status-bar" content="#aa7700">
   <meta name="theme-color" content="black">
  
@@ -27,18 +29,17 @@
 <picture>
   <img src="images/screenshot2.png" alt="Screenshot 2" width="208" height="81">  
 </picture>
-      <p>The function of a PWA is to provide the user with an UI/UX interaction that feels like a traditional app, but instead using a web browser. This app can be installed on the users desktop via a browser, and although this page is a simple device to change the backgroudn image, there are much more robust programming options availble to be deployed using this method.  In order to accomplish this taks we need to add a web app manifest file and a service worker.</p>
+      <p>The function of a PWA is to provide the user with an UI/UX interaction that feels like a traditional app, but instead uses a web browser to deploy. This app can be installed on the users desktop via a browser, and although this page is a simple device to change the background image, there are much more robust app programming options available using this method. In order to accomplish this taks we need to add a web app manifest file and a service worker.</p>
      <br>
       <picture>
       <img src="images/screenshot3.jpg" alt="Screenshot 3" width="215" height="306"> 
       </picture>
     
-      
-      <p>Here a JSON manifest file has been created for a basic PWA so the user will be able to see the option to install the application when using the menu of the browser - see the image shown here when a web application with PWA features when presented in the Chrome browser, shows and instal option in the menu of the browser. The user will also see the icon to download the application in the navigation bar of the browser.</p>
+      <h3>JSON: The Critical Element </h3>
+      <p>For this page, a JSON manifest file has been created for a basic PWA.  The items in this JSON file include the app name, description, and multiple icons of various sizes to be associated with the app to name a few. The PWA absolutely relies on the use of the JSON for the app to work, and without it, the simple PWA would break.  The user will be able to see the option to install the application when using the menu of the browser - see the image shown here when a web application with PWA features is presented in the Chrome browser, shows and instal option in the menu of the browser. The user will also see the icon to download the application in the navigation bar of the browser. This page actually employs two different JavaScript files in addition to the JSON file - one of which calls the service worker script into action, while simultaneously calling the function of changing the background images. The second piece of JavaScript used for this page is the service worker script itself, which performs the multiple functions described on the above page.</p>
+<br>
+</article>
 
-
- 
-  </article>
 
   <aside class="aside aside-1">
     
@@ -47,12 +48,14 @@
     <picture>
       <img src="images/screenshot.jpg" alt="Screenshot" width="250" height="250"> 
   </picture>
- <p>We can use a service worker JavaScript file to help build our PWA, but also services workers can also be employed for background tasks, such as provided continuity for the user if an Internect connection is cut off.</p>
+
+ <p>We can use a JavaScript service worker file to help build our PWA, but also service workers can also be employed for background tasks, such as providing continuity for the user if an Internet connection is cut off.  The images and text of the page are preserved while any connectivity issues can be resolved.</p>
+ 
  <button id="btn-1">Light Gold</button>
  <button id="btn-2">Light Blue</button>
-       
-        <p>Above are two buttons that allow the user to change the background image of this page.  What the user many not not is that the developer has also installed a Service Worker JavaScript that opens the caches object with the name that was given in the variable CACHE_VERSION.  Viewing the Cache Storage in Chrome Developer tools indicates all of the elements availble to the user even when browsing offline.</p>  
-       
+ <h3>Button Test</h3>
+        <p>Above are two buttons that allow the user to change the background image of this page. What the user probably doesn't know is that the developer has also installed a JavaScript Service Worker that opens the caches object with the name that was given in the variable CACHE_VERSION. Viewing the Cache Storage in Chrome Developer tools indicates all of the elements available to the user even when browsing offline, including the background images and basic html of this page.</p>  
+       <br>
        
   
     <script src="script.js"></script>

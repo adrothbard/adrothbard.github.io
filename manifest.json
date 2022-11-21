@@ -8,6 +8,11 @@
     "scope": ".",
     "description":"CNIT 133M HWK4 PWA Project",
     "icons":[
+      {
+        "src":"images/icon-72x72.png",                     
+        "sizes":"72x72",
+        "type":"image/png"
+        },
     {
     "src":"images/icon-192x192.png",                     
     "sizes":"192x192",
